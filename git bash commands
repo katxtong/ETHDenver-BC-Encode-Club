@@ -1,0 +1,9 @@
+$ cd C:/Users/Kathy/develop/ETHDenver_2022
+
+$ git clone https://github.com/katxtong/ETHDenver-Bootcamp
+
+$ cd ETHDenver-bootcamp
+
+$ git checkout -b VTK
+
+$ code
