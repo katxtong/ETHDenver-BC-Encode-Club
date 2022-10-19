@@ -8,10 +8,8 @@ $ git checkout -b VTK
 
 $ code
 
-
-
-
-
+useful tutorial here:
+https://github.com/kvutien/Project-ETHDenver-bootcamp/blob/main/README.md
 
 
 
