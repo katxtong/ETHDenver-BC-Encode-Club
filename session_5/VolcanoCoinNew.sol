@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
 //2
-pragma solidity >0.8.0;
+pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 //4
@@ -47,6 +47,7 @@ contract VolcanoCoin is Ownable {
     //7,10,12
     function increaseSupply() external onlyOwner {
         totalSupply += 1000;
+        balances[owner()] += 1000;
         emit totalSupplyChange(totalSupply);
     }
     
@@ -58,6 +59,7 @@ contract VolcanoCoin is Ownable {
     //16,17,18
     function transfer(address toUser, uint256 transferCoin) external {
         // added condition
+        assert(transferCoin >0);
         require(balances[msg.sender] >= transferCoin, "Sender does not have enough balance");
         balances[toUser] += transferCoin;
         balances[msg.sender] -= transferCoin;
